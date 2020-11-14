@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos e Tamanho da Font em JavaScript</title>
+	<style>
+		p {
+			border: 1px solid #000;
+		}
+	</style>
+	<script>
+		//E como faço, para quando o mouse "sair" do elemento, mudar a cor da borda pra verde?
+		function passar_mouse() {
+			//document = objeto do navegador com o "DOM" (com a árvore de todos elementos, suas propriedades, atributos, estilos e etc renderizados)
+			//alert("Opa, passaram o mouse no parágrafo!");
+			var par = document.getElementById('paragrafo');
+			console.log(par);
+			par.style.borderColor="red";
+			par.style.backgroundColor="#ff9494";
+		}
+		
+		function alterar_cor() {
+			var par = document.getElementById('paragrafo');
+			par.style.borderColor="green";
+			par.style.backgroundColor="#7fd498";
+		}
+		
+	</script>
+</head>
+	<body>
+		<p id="paragrafo" onmouseover="passar_mouse()" onmouseout="alterar_cor()">
+			Lorem Ipsum
+		</p>
+	</body>
+</html>
+
+
+
