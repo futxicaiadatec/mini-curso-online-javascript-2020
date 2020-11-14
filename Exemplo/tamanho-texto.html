@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificando o Tamanho do Texto com JavaScript</title>
+	<script>
+		function altera_tamanho_texto(tamanho) {
+			/*var lista_paragrafos = document.getElementsByTagName("p");			
+			for (let i=0;i<lista_paragrafos.length;i++) {
+				lista_paragrafos[i].style.fontSize = tamanho+"px";
+			}*/
+			
+			document.querySelectorAll("p").forEach(
+				function(e) {
+					e.style.fontSize = tamanho+"px";
+				}
+			);
+			
+		}
+		
+		function func_range(elem) {
+			document.querySelector("strong").innerHTML = elem.value;
+		}
+		
+	</script>
+</head>
+	<body>
+		<button onclick="altera_tamanho_texto('9')">Texto Pequeno</button>
+		<button onclick="altera_tamanho_texto('16')">Texto Médio</button>
+		<button onclick="altera_tamanho_texto('28')">Texto Grande</button>
+		<br />
+		Escolha o tamanho da fonte: <input oninput="func_range(this)" type="range" min="5" max="50" step="1" />
+		<br />
+		Valor selecionado: <strong></strong>
+		<p id="parag">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu vulputate nisi. Nunc hendrerit orci vitae odio mollis, ac hendrerit odio viverra. Nam tempor purus non finibus imperdiet. Etiam lobortis laoreet semper. Phasellus nisi sem, tincidunt sed sodales id, tristique eu purus. Mauris vestibulum, ligula vel rhoncus malesuada, metus metus accumsan orci, vel pharetra nisi dolor sed nibh. In nisl nisl, luctus ac egestas vel, luctus in nunc. Nam ac lorem gravida, euismod nisl sit amet, fermentum quam. In hac habitasse platea dictumst. Donec convallis quis massa in lobortis. Pellentesque congue ligula a sapien elementum euismod. Nulla convallis rhoncus eros, id faucibus ligula.</p>
+		<p>Mauris sit amet nibh aliquam, consequat urna non, blandit risus. Vestibulum id mauris vitae mi sodales rutrum sed quis diam. Sed feugiat elementum nibh nec blandit. Sed cursus tempor tortor et imperdiet. Nulla nec nisi sit amet risus ultrices consequat sed in erat. Praesent ornare sapien sed arcu laoreet, nec euismod sapien iaculis. Proin nec nisi et lorem consectetur porttitor ac posuere quam. Nullam dignissim egestas pellentesque. Vestibulum tincidunt magna metus, at viverra felis molestie non. Quisque vitae nulla justo. Phasellus ante lacus, vestibulum vitae tortor vel, placerat sodales ipsum. Suspendisse mattis nulla in tellus iaculis vehicula. Mauris eget diam eget purus scelerisque sagittis. Etiam suscipit dui in est auctor sollicitudin. Nam at leo ante.</p>
+		<p>Suspendisse potenti. Morbi vehicula a metus vitae condimentum. Aenean euismod odio et ullamcorper fringilla. Fusce ornare dolor in sem rhoncus, sit amet ultrices sem auctor. Nulla et justo molestie, molestie leo ac, interdum nisl. Vestibulum quis orci ligula. Morbi dignissim cursus turpis eu aliquet. Sed sed quam eget mi consectetur viverra.</p>
+		<p>Maecenas ut pretium mi. Nam cursus nulla id ligula malesuada, at tincidunt urna dignissim. In hac habitasse platea dictumst. Phasellus faucibus at elit id faucibus. Quisque porttitor, magna et vehicula rutrum, ipsum lacus pharetra felis, vel laoreet nulla sem tristique sem. Suspendisse et dolor ac nulla pellentesque aliquam. Mauris id orci odio. Sed et leo quis erat feugiat feugiat. Sed et neque non eros convallis tincidunt. Vivamus elementum sem justo, nec mattis erat imperdiet sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut in ultrices metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ac tempor diam. Cras mollis velit at sem condimentum dapibus.</p>
+	</body>
+</html>
